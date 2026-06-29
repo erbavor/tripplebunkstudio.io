@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Re in AAA Video Game sigil">
+  <defs>
+    <linearGradient id="ember" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8b878"/>
+      <stop offset=".5" stop-color="#c9762f"/>
+      <stop offset="1" stop-color="#7a2d22"/>
+    </linearGradient>
+    <radialGradient id="eglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#c9762f" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#c9762f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="url(#eglow)"/>
+  <!-- outer broken ring -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="url(#ember)" stroke-width="3" stroke-dasharray="118 24" opacity=".85"/>
+  <circle cx="100" cy="100" r="66" fill="none" stroke="#c9762f" stroke-width="1.5" opacity=".4"/>
+  <!-- runic star / keeper's mark -->
+  <g fill="none" stroke="url(#ember)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M100 44 L122 100 L100 156 L78 100 Z"/>
+    <path d="M52 78 L148 78 M52 122 L148 122"/>
+    <line x1="100" y1="30" x2="100" y2="44"/>
+    <line x1="100" y1="156" x2="100" y2="170"/>
+  </g>
+  <circle cx="100" cy="100" r="9" fill="url(#ember)"/>
+</svg>

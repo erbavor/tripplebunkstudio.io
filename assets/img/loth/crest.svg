@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Lord of the Halo crest">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6c860"/>
+      <stop offset="1" stop-color="#8a7330"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="50%">
+      <stop offset="0" stop-color="#e6c860" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#e6c860" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="84" r="78" fill="url(#glow)"/>
+  <!-- the halo -->
+  <ellipse cx="100" cy="62" rx="58" ry="17" fill="none" stroke="url(#g)" stroke-width="5"/>
+  <ellipse cx="100" cy="62" rx="46" ry="12" fill="none" stroke="#c8a951" stroke-width="1.5" opacity=".5"/>
+  <!-- crossed swords -->
+  <g stroke="url(#g)" stroke-width="6" stroke-linecap="round" fill="none">
+    <line x1="62" y1="92" x2="138" y2="170"/>
+    <line x1="138" y1="92" x2="62" y2="170"/>
+  </g>
+  <g fill="#e6c860">
+    <!-- pommels -->
+    <circle cx="60" cy="90" r="6"/>
+    <circle cx="140" cy="90" r="6"/>
+    <!-- crossguards -->
+    <rect x="52" y="150" width="28" height="6" rx="3" transform="rotate(45 66 153)"/>
+    <rect x="120" y="150" width="28" height="6" rx="3" transform="rotate(-45 134 153)"/>
+  </g>
+</svg>

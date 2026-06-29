@@ -1,0 +1,114 @@
+@charset "UTF-8";
+/* ===================================================================
+   Re in AAA Video Game — page theme
+   Fatekeeper-style dark-fantasy action-RPG: near-black, ember accent,
+   gothic serif headers, full-bleed key art, alternating feature blocks.
+   =================================================================== */
+
+.theme-re {
+  --bg: #08060a;
+  --bg-2: #0e0b10;
+  --panel: rgba(201,118,47,.05);
+  --panel-2: rgba(255,255,255,.04);
+  --border: rgba(201,118,47,.18);
+  --border-strong: rgba(201,118,47,.42);
+  --fg: #efe7df;
+  --fg-dim: #b3a99f;
+  --fg-faint: #756b62;
+  --accent: #c9762f;       /* ember */
+  --accent-2: #e8a45a;     /* warm gold */
+  --accent-ink: #100a06;
+  --font-display: "Cinzel", Georgia, serif;
+}
+
+/* ── Hero (full-bleed key art) ───────────────────────────────────── */
+.rhero { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.rhero__img { position: absolute; inset: 0; background: url("../img/re/keyart.jpg") center/cover no-repeat; transform: scale(1.05); animation: kb 22s ease-in-out infinite alternate; }
+@keyframes kb { to { transform: scale(1.16) translateY(-2%); } }
+.rhero__scrim { position: absolute; inset: 0; background:
+  linear-gradient(180deg, rgba(8,6,10,.6) 0%, rgba(8,6,10,.25) 35%, rgba(8,6,10,.85) 85%, var(--bg) 100%),
+  radial-gradient(120% 80% at 50% 120%, rgba(201,118,47,.22), transparent 60%); }
+.rhero__embers { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.rhero__embers span { position: absolute; bottom: -20px; width: 4px; height: 4px; border-radius: 50%;
+  background: #e8a45a; box-shadow: 0 0 8px 2px rgba(232,164,90,.6); opacity: 0; animation: rise linear infinite; }
+@keyframes rise { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: .9; } 100% { transform: translateY(-100vh) translateX(40px); opacity: 0; } }
+.rhero__inner { position: relative; z-index: 2; text-align: center; width: min(100% - 48px, 920px); margin-inline: auto; padding: 100px 0 90px; }
+.rhero__sigil { width: clamp(96px,14vw,150px); margin: 0 auto 22px; filter: drop-shadow(0 0 30px rgba(201,118,47,.5)); }
+.rhero__eyebrow { font-family: var(--font-body); text-transform: uppercase; letter-spacing: .45em; font-size: .76rem; color: var(--accent-2); margin-bottom: 14px; }
+.rhero__title { font-size: clamp(2.6rem, 8vw, 6rem); line-height: .98; letter-spacing: .02em; text-transform: uppercase;
+  background: linear-gradient(180deg,#fff 0%, #f0d3a8 50%, #c9762f 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 4px 40px rgba(0,0,0,.6); }
+.rhero__sub { color: var(--fg-dim); font-size: clamp(1rem,1.5vw,1.2rem); max-width: 54ch; margin: 22px auto 34px; }
+.rhero__cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.rhero__scroll { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 2; font-family: var(--font-body); font-size: .7rem; letter-spacing: .3em; text-transform: uppercase; color: var(--fg-faint); }
+
+/* ── Section heads ───────────────────────────────────────────────── */
+.rhead { text-align: center; max-width: 64ch; margin: 0 auto 60px; }
+.rhead .eyebrow { color: var(--accent); }
+.rhead h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+.rhead p { color: var(--fg-dim); margin-top: 16px; }
+.divider { width: 120px; height: 1px; margin: 0 auto 60px; background: linear-gradient(90deg, transparent, var(--accent), transparent); position: relative; }
+.divider::after { content: "❖"; position: absolute; top: -11px; left: 50%; transform: translateX(-50%); color: var(--accent); font-size: .9rem; background: var(--bg); padding: 0 10px; }
+
+/* ── Story band ──────────────────────────────────────────────────── */
+.section--story { text-align: center; background: radial-gradient(90% 100% at 50% 0%, #140d10, var(--bg) 70%); }
+.story__quote { font-family: var(--font-display); font-size: clamp(1.5rem, 3.4vw, 2.4rem); line-height: 1.4; max-width: 22ch; margin: 0 auto; color: var(--fg); }
+.story__quote span { color: var(--accent-2); font-style: italic; }
+.story__p { color: var(--fg-dim); max-width: 60ch; margin: 28px auto 0; }
+
+/* ── Feature blocks (alternating image + text) ───────────────────── */
+.feat { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; margin-bottom: clamp(56px, 8vw, 110px); }
+.feat:last-child { margin-bottom: 0; }
+.feat--flip .feat__media { order: 2; }
+.feat__media { position: relative; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 16/10; cursor: zoom-in; }
+.feat__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.feat__media:hover img { transform: scale(1.06); }
+.feat__media::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 90px rgba(8,6,10,.7); pointer-events: none; }
+.feat__num { font-family: var(--font-display); font-size: 3.4rem; font-weight: 800; line-height: 1; color: transparent; -webkit-text-stroke: 1px var(--border-strong); margin-bottom: 10px; }
+.feat__kicker { font-family: var(--font-body); text-transform: uppercase; letter-spacing: .25em; font-size: .74rem; color: var(--accent); margin-bottom: 14px; }
+.feat h3 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 16px; }
+.feat p { color: var(--fg-dim); margin-bottom: 16px; }
+.feat__list { display: grid; gap: 9px; margin-top: 18px; }
+.feat__list li { display: flex; gap: 11px; align-items: baseline; font-family: var(--font-body); color: var(--fg-dim); font-size: .94rem; }
+.feat__list li::before { content: "◈"; color: var(--accent); font-size: .7rem; flex: none; }
+@media (max-width: 820px) {
+  .feat { grid-template-columns: 1fr; gap: 24px; }
+  .feat--flip .feat__media { order: 0; }
+}
+
+/* ── Screenshot gallery ──────────────────────────────────────────── */
+.section--gallery { background: linear-gradient(180deg, var(--bg), #0c0a0e); border-block: 1px solid var(--border); }
+.gallery { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.gallery figure { position: relative; overflow: hidden; border: 1px solid var(--border); cursor: zoom-in; aspect-ratio: 16/10; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s, filter .4s; filter: saturate(.92) brightness(.92); }
+.gallery figure:hover img { transform: scale(1.07); filter: saturate(1.05) brightness(1.02); }
+.gallery .g-wide { grid-column: span 4; }
+.gallery .g-tall { grid-column: span 2; }
+.gallery .g-half { grid-column: span 3; }
+.gallery .g-third { grid-column: span 2; }
+@media (max-width: 760px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery .g-wide, .gallery .g-tall, .gallery .g-half, .gallery .g-third { grid-column: span 2; }
+}
+
+/* ── Pillar mini-cards (combat/world/etc.) ───────────────────────── */
+.section--coop { background: radial-gradient(80% 120% at 50% 100%, #140d10, var(--bg) 70%); }
+.coop { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+.coop__media { border: 1px solid var(--border); overflow: hidden; aspect-ratio: 16/10; }
+.coop__media img { width: 100%; height: 100%; object-fit: cover; }
+.coop__list { display: grid; gap: 18px; margin-top: 24px; }
+.coop__list li b { display: block; font-family: var(--font-display); font-size: 1.15rem; }
+.coop__list li p { color: var(--fg-dim); font-size: .92rem; }
+@media (max-width: 820px) { .coop { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ── Platform / CTA ──────────────────────────────────────────────── */
+.section--rcta { text-align: center; background:
+  linear-gradient(180deg, var(--bg), #0c0a0e),
+  radial-gradient(60% 120% at 50% 100%, rgba(201,118,47,.16), transparent 60%); }
+.rcta__sigil { width: 84px; margin: 0 auto 24px; opacity: .9; }
+.section--rcta h2 { font-size: clamp(2.2rem, 5.5vw, 4rem); text-transform: uppercase;
+  background: linear-gradient(180deg,#fff,#c9762f); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.section--rcta p { color: var(--fg-dim); max-width: 50ch; margin: 18px auto 30px; }
+.platform { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--fg-dim); margin-top: 24px; }
+.platform svg { width: 18px; height: 18px; fill: var(--fg-dim); }
+.rcta__btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
