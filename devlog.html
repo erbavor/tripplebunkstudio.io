@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devlog — Tripple Bunk Studios</title>
+<meta name="description" content="Development updates from Tripple Bunk Studios — progress, videos and behind-the-scenes on Lord of the Halo and Re in AAA Video Game.">
+<meta name="theme-color" content="#0a0a0e">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Tripple Bunk Studios — Devlog">
+<meta property="og:description" content="Development updates, videos and behind-the-scenes on our two games in the making.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tripplebunkstudios.com/devlog.html">
+<meta property="og:image" content="https://tripplebunkstudios.com/assets/img/studio/og.jpg">
+<link rel="canonical" href="https://tripplebunkstudios.com/devlog.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tripple Bunk Studios — Devlog">
+<meta name="twitter:description" content="Development updates, videos and behind-the-scenes on our two games in the making.">
+<meta name="twitter:image" content="https://tripplebunkstudios.com/assets/img/studio/og.jpg">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/studio.css">
+<link rel="stylesheet" href="assets/css/devlog.css">
+<script defer src="assets/js/main.js"></script>
+</head>
+<body class="theme-studio">
+
+<!-- ───────────────── NAV ───────────────── -->
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__brand" aria-label="Tripple Bunk Studios home">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" style="color:var(--accent)">
+        <line x1="13" y1="10" x2="13" y2="38"/><line x1="35" y1="10" x2="35" y2="38"/>
+        <line x1="11" y1="13.5" x2="37" y2="13.5"/><line x1="11" y1="24" x2="37" y2="24"/><line x1="11" y1="34.5" x2="37" y2="34.5"/>
+      </svg>
+      <span>TRIPPLE&nbsp;<b>BUNK</b></span>
+    </a>
+    <button class="nav__burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+    <nav class="nav__links" id="nav-links">
+      <a href="index.html">Studio</a>
+      <div class="nav__item nav__item--dd">
+        <a href="lord-of-the-halo.html" class="nav__parent" aria-haspopup="true">Lord of the Halo <i class="nav__caret" aria-hidden="true">▾</i></a>
+        <div class="nav__dd">
+          <a href="lord-of-the-halo.html">Overview</a>
+          <a href="lord-of-the-halo.html#rpg">RPG Mode</a>
+          <a href="loth-classes.html">Classes</a>
+          <a href="lord-of-the-halo.html#maps">Battlegrounds</a>
+        </div>
+      </div>
+      <a href="re-in-aaa.html">Re in AAA Video Game</a>
+      <a href="devlog.html" class="active">Devlog</a>
+      <a href="index.html#contact" class="nav__cta">Follow</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ───────────────── HEADER ───────────────── -->
+<header class="dl-hero">
+  <div class="wrap dl-hero__inner">
+    <p class="eyebrow reveal">Development Blog</p>
+    <h1 class="section-title reveal d1">Devlog</h1>
+    <p class="lead reveal d2">Progress, videos and behind-the-scenes as we build
+      <strong style="color:var(--fg)">Lord of the Halo</strong> and
+      <strong style="color:var(--fg)">Re in AAA Video Game</strong>. New entries land here and on our channel.</p>
+    <div class="dl-hero__cta reveal d3">
+      <a href="https://www.youtube.com/@TrippleBunkStudios" target="_blank" rel="noopener" class="btn btn--yt">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg>
+        Subscribe on YouTube
+      </a>
+      <a href="https://discord.gg/vRTEpM6jb" target="_blank" rel="noopener" class="btn btn--ghost">Join the Discord</a>
+    </div>
+  </div>
+</header>
+
+<!-- ───────────────── FEED ───────────────────
+     To publish a new entry, copy the <article class="post"> block below,
+     paste it at the TOP of the feed, and update the date / tag / title / body.
+     Tag classes: post__tag--studio · post__tag--loth · post__tag--re
+     To add a video, drop a .post__embed block (see commented template) and
+     replace VIDEO_ID with the YouTube id (the part after "watch?v=").
+─────────────────────────────────────────────── -->
+<main class="dl-feed">
+
+  <!-- ░░░ POST TEMPLATE — copy this block for new entries ░░░
+  <article class="post reveal" id="2026-07-example">
+    <div class="post__meta">
+      <span class="post__date">Jul 1, 2026</span>
+      <span class="post__tag post__tag--loth">Lord of the Halo</span>
+    </div>
+    <h2 class="post__title">A short, punchy headline</h2>
+    <div class="post__embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Devlog video"
+        loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+    <div class="post__body">
+      <p>What you worked on, why it matters, what’s next. Link things with
+        <a href="lord-of-the-halo.html">normal anchors</a>.</p>
+    </div>
+  </article>
+  ░░░ END TEMPLATE ░░░ -->
+
+  <!-- Starter entry -->
+  <article class="post reveal" id="2026-06-hello">
+    <div class="post__meta">
+      <span class="post__date">Jun 29, 2026</span>
+      <span class="post__tag post__tag--studio">Studio</span>
+    </div>
+    <h2 class="post__title">Welcome to the devlog</h2>
+    <div class="post__body">
+      <p>This is home base for development updates from <strong>Tripple Bunk Studios</strong>.
+        We’re a small team building two games at once — a fast, class-based fantasy arena
+        (<a href="lord-of-the-halo.html">Lord of the Halo</a>) and a story-driven co-op
+        action-RPG (<a href="re-in-aaa.html">Re in AAA Video Game</a>) — and we want to
+        build them in the open.</p>
+      <p>Expect work-in-progress footage, feature breakdowns, art and design notes, and the
+        occasional honest post-mortem. Video updates go up on our
+        <a href="https://www.youtube.com/@TrippleBunkStudios" target="_blank" rel="noopener">YouTube channel</a>
+        and get embedded right here.</p>
+      <p>Want updates and playtest invites first? <strong>Subscribe on YouTube</strong> and
+        <a href="https://discord.gg/vRTEpM6jb" target="_blank" rel="noopener">join the Discord</a>.
+        More soon. ⚔️</p>
+    </div>
+  </article>
+
+  <p class="dl-end">— That’s everything for now. New entries land at the top. —</p>
+</main>
+
+<!-- ───────────────── FOOTER ───────────────── -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" style="color:var(--accent)">
+          <line x1="13" y1="10" x2="13" y2="38"/><line x1="35" y1="10" x2="35" y2="38"/>
+          <line x1="11" y1="13.5" x2="37" y2="13.5"/><line x1="11" y1="24" x2="37" y2="24"/><line x1="11" y1="34.5" x2="37" y2="34.5"/>
+        </svg>
+        <p style="color:var(--fg-dim);max-width:34ch">An independent game studio crafting bold worlds.</p>
+        <div class="footer__socials">
+          <a href="https://discord.gg/vRTEpM6jb" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4.4A19 19 0 0 0 15.3 3l-.2.5a14 14 0 0 1 3.5 1.6 13 13 0 0 0-12-.1A14 14 0 0 1 9.9 3.5L9.7 3A19 19 0 0 0 4 4.4 19.7 19.7 0 0 0 .7 17.6 19 19 0 0 0 6.5 21l.7-1a12 12 0 0 1-2-1l.5-.4a13 13 0 0 0 11.6 0l.5.4a12 12 0 0 1-2 1l.7 1a19 19 0 0 0 5.8-3.4A19.6 19.6 0 0 0 20 4.4ZM8.3 14.6c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7 8 8.2 12h-6.4l-5-7.3L6 22H2.9l7.5-8.6L2.4 2h6.5l4.5 6.7L18.9 2Zm-1.1 18h1.7L7.3 3.8H5.5L17.8 20Z"/></svg></a>
+          <a href="https://www.youtube.com/@TrippleBunkStudios" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5ZM9.8 15.3V8.7l5.7 3.3-5.7 3.3Z"/></svg></a>
+          <a href="#" aria-label="Steam"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-9.9 8.8l5.3 2.2a2.8 2.8 0 0 1 1.6-.5h.2l2.4-3.4v-.1a3.8 3.8 0 1 1 3.8 3.8h-.1l-3.4 2.4v.2a2.8 2.8 0 0 1-5.6.2l-3.8-1.6A10 10 0 1 0 12 2Zm-3.4 14.9 1.2.5a2.1 2.1 0 0 0 1.6-3.9l-1.3-.5a2.1 2.1 0 0 1-1.5 3.9Zm7.9-7.3a2.5 2.5 0 1 0-2.5 2.5 2.5 2.5 0 0 0 2.5-2.5Z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Games</h4>
+        <a href="lord-of-the-halo.html">Lord of the Halo</a>
+        <a href="re-in-aaa.html">Re in AAA Video Game</a>
+      </div>
+      <div>
+        <h4>Studio</h4>
+        <a href="index.html#about">About</a>
+        <a href="devlog.html">Devlog</a>
+        <a href="index.html#contact">Follow / Contact</a>
+        <a href="index.html#games">All games</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> Tripple Bunk Studios. All rights reserved.</span>
+      <span>Made with care in Godot &amp; Unreal Engine 5.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

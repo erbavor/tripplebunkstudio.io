@@ -85,6 +85,13 @@ h1, h2, h3, h4 { font-family: var(--font-display, "Cinzel", serif); line-height:
 .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -8px var(--accent); }
 .btn--ghost { background: transparent; color: var(--fg); border-color: var(--border-strong); }
 .btn--ghost:hover { border-color: var(--accent); color: var(--accent); box-shadow: none; }
+/* "Coming soon" — non-clickable placeholder (e.g. Steam page not live yet) */
+.btn--soon { background: transparent; color: var(--fg-dim); border-color: var(--border); cursor: default; }
+.btn--soon:hover { transform: none; box-shadow: none; }
+.btn__tag {
+  font-style: normal; font-size: .62rem; letter-spacing: .12em; line-height: 1;
+  padding: 4px 8px; border-radius: 100px; background: var(--accent); color: var(--accent-ink);
+}
 
 /* ── Top navigation (shared across all pages) ────────────────────── */
 .nav {

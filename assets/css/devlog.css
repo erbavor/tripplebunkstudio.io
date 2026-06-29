@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* ===================================================================
+   Devlog feed (studio-themed). Loads after base.css + studio.css.
+   Each entry is a self-contained <article class="post"> — to publish,
+   copy the template block at the top of the feed in devlog.html.
+   =================================================================== */
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.dl-hero {
+  position: relative; overflow: hidden; text-align: center;
+  padding: calc(var(--nav-h) + clamp(46px, 8vw, 96px)) 0 clamp(34px, 5vw, 64px);
+  background: radial-gradient(120% 90% at 50% -20%, #1a1530 0%, var(--bg) 62%);
+}
+.dl-hero__inner { position: relative; z-index: 2; }
+.dl-hero .lead { margin-inline: auto; }
+.dl-hero__cta { margin-top: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+
+/* YouTube button gets YouTube red on hover so it reads as "subscribe" */
+.btn--yt { gap: .55em; }
+.btn--yt svg { width: 18px; height: 18px; }
+.btn--yt:hover { background: #ff0033; border-color: #ff0033; color: #fff; box-shadow: 0 12px 30px -8px rgba(255,0,51,.5); }
+
+/* ── Feed ────────────────────────────────────────────────────────── */
+.dl-feed { width: min(100% - 48px, 840px); margin: 0 auto; padding: clamp(40px, 6vw, 80px) 0 clamp(64px, 9vw, 120px); display: flex; flex-direction: column; gap: 26px; }
+
+.post {
+  background: var(--panel); border: 1px solid var(--border); border-radius: 16px;
+  padding: clamp(22px, 3.4vw, 40px); scroll-margin-top: calc(var(--nav-h) + 20px);
+}
+.post__meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.post__date { font-family: var(--font-body); font-size: .76rem; letter-spacing: .16em; text-transform: uppercase; color: var(--fg-faint); }
+.post__tag {
+  font-family: var(--font-body); font-size: .64rem; font-weight: 700; letter-spacing: .16em;
+  text-transform: uppercase; padding: 5px 11px; border-radius: 100px;
+  border: 1px solid currentColor; color: var(--accent);
+}
+.post__tag--loth   { color: #c8a951; }   /* Lord of the Halo — gold  */
+.post__tag--re     { color: #c9762f; }   /* Re in AAA — ember        */
+.post__tag--studio { color: var(--accent); }
+.post__title { font-size: clamp(1.35rem, 2.7vw, 2rem); letter-spacing: .01em; margin-bottom: 14px; }
+.post__body { color: var(--fg-dim); }
+.post__body p { margin-bottom: 1em; }
+.post__body p:last-child { margin-bottom: 0; }
+.post__body strong { color: var(--fg); }
+.post__body a { color: var(--accent); border-bottom: 1px solid currentColor; }
+
+/* ── Video embed (16:9, lazy) ────────────────────────────────────── */
+.post__embed {
+  position: relative; aspect-ratio: 16 / 9; margin: 4px 0 20px;
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #000;
+}
+.post__embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ── Empty / closing note ────────────────────────────────────────── */
+.dl-end { text-align: center; color: var(--fg-faint); font-family: var(--font-body); font-size: .9rem; padding-top: 8px; }
