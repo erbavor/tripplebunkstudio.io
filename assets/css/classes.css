@@ -129,3 +129,8 @@
 
 /* let roster cards on the main page behave as links */
 a.class { display: block; color: inherit; }
+
+
+/* ── Gender indicators (hero chip + roster card tag) ─────────────── */
+.cchip--sex { color: var(--fg); border-color: var(--cc, var(--accent)); background: color-mix(in srgb, var(--cc, #888) 15%, transparent); }
+.ccard__sex { display: inline-block; font-family: var(--font-body); font-size: .6rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 3px 8px; margin-bottom: 8px; border: 1px solid var(--cc, var(--border-strong)); color: var(--fg); background: color-mix(in srgb, var(--cc, #888) 16%, transparent); }

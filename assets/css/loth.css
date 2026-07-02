@@ -198,3 +198,27 @@
   background: linear-gradient(180deg,#fff,#c8a951); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .section--lcta p { color: var(--fg-dim); max-width: 50ch; margin: 18px auto 32px; }
 .section--lcta .lhero__cta { justify-content: center; }
+
+
+/* ── Default champion — Lumen Nati (arena / all non-RPG modes) ────── */
+.section--lumen { background: radial-gradient(120% 90% at 82% 0%, rgba(200,169,81,.07), transparent 60%); }
+.lumen { display: grid; grid-template-columns: minmax(0,.8fr) 1fr; gap: clamp(24px,4vw,56px); align-items: center; margin-top: 30px; }
+.lumen__art { position: relative; border: 1px solid var(--border-strong); background: #0b0b0e; overflow: hidden; cursor: zoom-in; }
+.lumen__art .chip-corner { position: absolute; top: 12px; left: 12px; z-index: 2; }
+.lumen__art img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; transition: transform .5s; }
+.lumen__art:hover img { transform: scale(1.04); }
+.lumen__role { font-family: var(--font-body); text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; color: var(--accent); display: inline-flex; align-items: center; margin-bottom: 4px; }
+.lumen__name { font-size: clamp(2rem,4.6vw,3.3rem); letter-spacing: .02em; margin: 4px 0 16px; }
+.lumen__body p { color: var(--fg-dim); margin-bottom: 14px; max-width: 62ch; }
+.lumen__sub { color: var(--fg) !important; }
+.lumen__swatches { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 20px; }
+.lumen__swatches span { width: 26px; height: 26px; background: var(--s); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 0 12px -3px var(--s); }
+.lumen__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.lumen__chip { display: inline-block; font-family: var(--font-body); font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; padding: 6px 12px; border: 1px solid var(--border-strong); color: var(--fg-dim); }
+.lumen__gallery { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; margin-top: 34px; }
+.lumen__gallery figure { position: relative; border: 1px solid var(--border); overflow: hidden; cursor: zoom-in; background: #0b0b0e; }
+.lumen__gallery img { width: 100%; height: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; transition: transform .5s; }
+.lumen__gallery figure:hover img { transform: scale(1.05); }
+.lumen__gallery figcaption { position: absolute; inset: auto 0 0 0; padding: 14px 12px 10px; font-family: var(--font-body); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--fg); background: linear-gradient(transparent, rgba(8,8,10,.9)); }
+@media (max-width: 900px) { .lumen { grid-template-columns: 1fr; } .lumen__art { max-width: 420px; } .lumen__gallery { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 560px) { .lumen__gallery { grid-template-columns: repeat(2,1fr); } }
